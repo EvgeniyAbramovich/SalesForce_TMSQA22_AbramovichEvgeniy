@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class EntityBasePage extends HomePage{
-
     private final static By NEW_BUTTON = By.cssSelector("div.active a[title=New]");
 
 

@@ -25,7 +25,6 @@ public class NewLeadModal extends BaseModal{
         new Input(driver,"AnnualRevenue").setValue(String.valueOf(annualRevenue));
 
     }
-
     public NewLeadModal(WebDriver driver) {
         super(driver);
     }

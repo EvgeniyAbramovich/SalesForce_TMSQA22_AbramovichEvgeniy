@@ -13,7 +13,6 @@ public class Input extends BaseElement {
         super(driver);
         this.name = name;
     }
-
     public void setValue(String value) {
         WebElement input = driver.findElement(By.xpath(String.format(INPUT_LOCATOR, this.name)));
         scrollIntoView(input);

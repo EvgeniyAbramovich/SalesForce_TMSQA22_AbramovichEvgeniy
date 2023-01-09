@@ -13,7 +13,6 @@ public class HomePage extends BasePage {
     private final static By CASES_MENU_TAB_LOCATOR = By.xpath("//one-app-nav-bar//a[@title='Cases']");
     private final static By TASKS_MENU_TAB_LOCATOR = By.xpath("//one-app-nav-bar//a[@title='Tasks']");
 
-
     public HomePage(WebDriver driver) {
         super(driver);
     }

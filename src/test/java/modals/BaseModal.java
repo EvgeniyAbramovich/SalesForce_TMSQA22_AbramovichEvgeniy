@@ -10,6 +10,7 @@ public abstract class BaseModal extends BasePage {
     private final static By SAVE_AND_NEW_BUTTON = By.xpath("//button[@name='SaveAndNew']");
     private final static By CANCEL_BUTTON = By.xpath("//button[@name='CancelEdit']");
 
+
     public BaseModal(WebDriver driver) {
         super(driver);
     }

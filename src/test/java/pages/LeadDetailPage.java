@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LeadDetailPage extends HomePage {
-
     private final static By NAME_TEXT = By.xpath("//span[@id='window']");
     private final static By PHONE_NUMBER = By.xpath("(//a[@lightning-formattedphone_formattedphone])[3]");
     private final static By EMAIL = By.xpath("(//a[@data-aura-class='emailuiFormattedEmail'])[2]");

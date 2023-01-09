@@ -24,7 +24,6 @@ public class LeadsTests extends BaseTest {
         homePage.openLeadsTab();
         leadsPage.clickNewButton();
 
-
         newLeadModal.fillform("Evgeniy","Abramovich",+375-29-596-60-99,"QA22",
                 "tinkerbox@yandex.by","engineer","salesforce.com","Novopolotsk",
                 "Vitebsk",211446,"Belarus",10,10000);
