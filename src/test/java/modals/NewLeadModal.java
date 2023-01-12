@@ -1,28 +1,40 @@
 package modals;
 
+import elements.DropDown;
 import elements.Input;
+import elements.TextArea;
+import models.Lead;
 import org.openqa.selenium.WebDriver;
 
 import java.awt.*;
 
 public class NewLeadModal extends BaseModal{
 
-    public void fillform(String firstName, String lastName, int phone, String companyName, String email, String title,
-                         String website, String cityName, String stateName, int postalCode, String countryName,
-                         int numberOfEmployees, int annualRevenue){
-        new Input(driver,"firstName").setValue(firstName);
-        new Input(driver,"lastName").setValue(lastName);
-        new Input(driver,"Phone").setValue(String.valueOf(phone));
-        new Input(driver,"Company").setValue(companyName);
-        new Input(driver,"Email").setValue(email);
-        new Input(driver,"Title").setValue(title);
-        new Input(driver,"Website").setValue(website);
-        new Input(driver,"city").setValue(cityName);
-        new Input(driver,"province").setValue(stateName);
-        new Input(driver,"postalCode").setValue(String.valueOf(postalCode));
-        new Input(driver,"country").setValue(countryName);
-        new Input(driver,"NumberOfEmployees").setValue(String.valueOf(numberOfEmployees));
-        new Input(driver,"AnnualRevenue").setValue(String.valueOf(annualRevenue));
+    public void fillform(Lead lead){
+        new Input(driver,"firstName").setValue(lead.getFirstName());
+        new Input(driver,"lastName").setValue(lead.getLastName());
+        new Input(driver,"Phone").setValue(String.valueOf(lead.getPhone()));
+        new Input(driver,"Company").setValue(lead.getCompany());
+        new Input(driver,"Email").setValue(lead.getEmail());
+        new Input(driver,"Title").setValue(lead.getTitle());
+        new Input(driver,"Website").setValue(lead.getWebsite());
+        new Input(driver,"city").setValue(lead.getCity());
+        new Input(driver,"state").setValue(lead.getState());
+        new Input(driver,"postalCode").setValue(String.valueOf(lead.getPostalCode()));
+        new Input(driver,"country").setValue(lead.getCountry());
+        new Input(driver,"NumberOfEmployees").setValue(String.valueOf(lead.getNoOfEmployees()));
+        new Input(driver,"AnnualRevenue").setValue(String.valueOf(lead.getAnnualRevenue()));
+        new DropDown(driver,"Lead Status").selectValue("New");
+        new DropDown(driver,"Rating").selectValue("Hot");
+        new DropDown(driver,"Lead Source").selectValue("Advertisement");
+        new DropDown(driver, "Industry").selectValue("Agriculture");
+        new TextArea(driver,"Street").setValue(lead.getStreet());
+        new TextArea(driver,"Description").setValue(lead.getDescription());
+
+
+
+
+
 
     }
     public NewLeadModal(WebDriver driver) {
