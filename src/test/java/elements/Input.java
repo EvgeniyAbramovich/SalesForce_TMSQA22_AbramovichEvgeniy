@@ -7,15 +7,15 @@ import org.openqa.selenium.WebElement;
 public class Input extends BaseElement {
 
        private final static String INPUT_LOCATOR = "//label[text()='%s']/following-sibling::div/input";
-       private String name;
+
 
     public Input(WebDriver driver, String label) {
         super(driver, label);
-        this.name = name;
+        this.label = label;
 
     }
     public void setValue(String value) {
-        WebElement input = driver.findElement(By.xpath(String.format(INPUT_LOCATOR, this.name)));
+        WebElement input = driver.findElement(By.xpath(String.format(INPUT_LOCATOR, this.label)));
         scrollIntoView(input);
         input.sendKeys(value);
     }
